@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head> 
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Iniciar sesión</title>
+		<link rel="stylesheet" href="CSS/styles.css"/>
+	</head>
+	<body>
+		<div id="container">
+			<form method="POST" autocomplete="off" action="./login" id='form-login'>
+				<p id="form-title">Iniciar sesión</p>
+				<input name="user" id="usuario" type="text" placeholder="Usuario" required/>
+				<input name="psk" id="contrasenna" type="password" placeholder="Contraseña" required/>
+				<input type="submit" value="Iniciar sesión"/>
+			</form>
+			<img id="logo-login" src="img/car.png" title="Introduce las credenciales: (Salva : Tequinox) para iniciar sesión" alt="Carro de la compra"/>
+			<div id="animationInElement">
+				<div id="err" th:if="${err}">
+					<p>⚠️ Usuario o contraseña incorrecto</p>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>

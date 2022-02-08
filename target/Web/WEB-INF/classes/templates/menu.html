@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+    <title>Menú</title>
+    <link rel="stylesheet" href="CSS/styles.css"/>
+</head>
+<body>
+    <nav>
+    	<p id="titleNav">Menú principal</p>
+    	<img loading="lazy" id="imgNav" src="img/car.png" alt="Cerrar sesión" title="Vea sus pedidos o genere uno nuevo"></img>
+    	<div id="actions">
+			<img loading="lazy" id="user" alt="Tú" src="../img/user.jpg" title="Tú"/>
+			<div class="hidden" id="optionsNav">
+				<a href="order/catalogue">
+					<span>+</span> Nuevo pedido
+				</a>
+				<a href="orders">
+					<span>🛒</span> Mis pedidos
+				</a>
+				<a id="exitLink" href="login/exit">
+					<span>🚪</span> Cerrar sesión
+				</a>
+			</div>
+    	</div>
+    </nav>
+	<div id="mainContainer">
+		<div id="mainMenu">
+	    <a class="animatedElementMenu" id="newOrderA" href="./order/catalogue">
+    		<img loading="lazy" class="imgMenu" src="../img/newOrder.png">
+    		<h4>Nuevo pedido</h4>
+    	</a>
+    	<a class="animatedElementMenu" id="orderA" href="/orders">
+	        <img loading="lazy" class="imgMenu" src="../img/orders.png">
+        	<h4>Mis pedidos</h4>
+    	</a>
+	</div>
+	<!-- Modal -->
+	<div th:if="${orderPending}" id="myModal" class="modal">
+	  	<!-- Modal content -->
+  		<div class="modal-content">
+	    	<h3>Pedido sin finalizar</h3>
+	    	<p>Tiene un pedido pendiente de finalizar. ¿Desea seguir con su pedido o eliminarlo?</p>
+			<div >
+				<a class="danger" href="/order/deleteTempOrder" id="deleteOrder">Eliminar pedido pendiente</a>
+	    		<a href="/order/catalogue" id="resumeOrder">Seguir con el pedido</a>
+			</div> 
+  		</div>
+	</div>
+</div>
+<script src="js/nav.js"></script>
+</body>
+</html>

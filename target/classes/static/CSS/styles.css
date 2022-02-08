@@ -1,0 +1,1354 @@
+/**
+                Common styles
+**/
+
+* {
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}	
+
+li {
+	list-style: none;
+}
+
+a > img {
+	filter: greyscale();
+}
+
+/**
+                Error page styles
+**/
+
+#container-error {
+    margin-top: 70px;
+    text-align: center;
+}
+
+#img-error {
+    width: 25%;
+    padding: 20px;
+}
+
+.amount[disabled="disabled"] {
+	visibility: hidden;
+}
+
+.second-font-color {
+    color: rgb(153, 153, 153);
+}
+
+.err-explation {
+    padding: 10px;
+}
+
+.long-text {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.116);
+    border: 1px solid grey;
+    display: inline-block;
+    max-width: 40%;
+    margin: 10px;
+}
+.link-bottom {
+    padding: 10px 20px;
+    display: block;
+    width: 140px;
+    margin: 7px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#options {
+    margin-top: 10px;
+}
+
+#details {
+    transition: 0.5s;
+    font-size: 14px;
+    color: rgb(158, 158, 158);
+}
+
+#details:hover {
+    color: white;
+}
+
+#back-to-catalog {
+    border: 1px solid white;
+    border-radius: 7px;
+    transition: 0.5s;
+}
+
+#back-to-catalog:hover {
+    background-color: white;
+    color: black;
+}
+
+/**
+                Login page styles
+**/
+
+html {
+	background: radial-gradient(ellipse at bottom,rgb(0, 0, 13), #070015);
+	background-image: url('../img/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#err {
+	padding: 15px 20px;
+	right: 2%;
+
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-name: errAnimationPopUp;
+    text-align: center;
+}
+
+#err > p {
+	display: block;
+	color: white;
+}
+
+#isAddedProduct {
+	padding: 15px 20px;
+	position: fixed;
+	background-color: #2d572c;
+    text-shadow: 1px 1px 1px black;
+	left: 0;
+	width: 20%;
+	margin-right: auto;
+	margin-left: auto;
+	right: 0;
+    opacity: 0;
+	bottom: 7%;
+    animation-duration: 4s;
+    animation-name: addAnimationPopUp;
+    text-align: center;
+}
+
+#isAddedProduct > p {
+	display: block;
+	color: white;
+}
+
+
+@keyframes addAnimationPopUp {
+    0% {
+        opacity: 1;
+        bottom: 2%;
+    }
+    25% {
+    	opacity: 1;
+    	bottom: 2%;
+    }
+
+    50% {
+        opacity: 1;
+        bottom: 2%;
+    }
+    
+    75% {
+        opacity: 0.250;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+#animationInElement {
+	right: 2%;
+	position: fixed;
+	bottom: 3%;
+	transition: 0.5s;
+	animation-duration: 2s;
+  	animation-name: slidein;
+	
+}
+
+@keyframes slidein {
+  from {
+    right: -25%;
+  }
+
+  to {
+    right: 2%;
+  }
+}
+
+@keyframes slideinUp {
+  from {
+    top: -10%;
+  }
+
+  to {
+    top: 0%;
+  }
+}
+
+
+
+@keyframes errAnimationPopUp {
+    0% {
+        background-color: rgba(255, 0, 0, 0.500);
+    }
+
+    50% {
+        background-color: rgba(255, 0, 0, 0.700);
+    }
+    
+    75% {
+        background-color: rgba(255, 0, 0, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 0, 0, 0.500);
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+    text-align: center;
+}
+
+#form-login {
+    background-color: rgba(255, 255, 255, 0.609);
+    backdrop-filter: blur(20px);
+    padding: 32px;
+    border-radius: 4px;
+    display: block;
+    margin-top: 190px;
+    width: 60%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#form-title {
+	color:black;
+    text-align: start;
+    margin-bottom: 20px;
+}
+
+.dataProduct > p {
+	margin-top: 5px;
+	text-align: start;
+	color: #d7d7d7;
+	margin-left: 30px;
+}
+
+#notFoundImage {
+	width: 30%;
+	animation-duration: 3s;
+	animation-name: packageAnimation;
+	animation-iteration-count: infinite;	
+}
+
+@keyframes packageAnimation {
+    0% {
+		transform: rotate3d(1, 1, 1, 1deg);
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+
+#notFoundImage + h4{
+	color: white;
+	position: relative;
+	top: -60px;
+	text-shadow: 1px 1px 1px black;
+}
+
+#listProduct {
+	padding: 30px;
+}
+
+.productInList:hover {
+	border-color: #5e5e5e;
+	
+	backdrop-filter: blur(20px);
+	border-radius: 5px;
+}
+
+.dataProduct > h4 {
+	text-align: start;
+}
+
+.productInList {
+	transition: 0.5s;
+	display: inline-block;
+	width: 430px;
+	border: 1px solid transparent;
+}
+
+.productInList > img {
+	width: 7em;
+}
+
+@media (min-width: 730px) {
+	.dataProduct {
+		width: 12em !important;
+	}
+	.dataProduct > p {
+		margin-left: 55px;
+	}
+}
+
+.dataProduct {
+	position:relative;
+	top: 0px;
+	width: 30%;
+	display: inline-block;
+}
+
+#titlePadding {
+	padding: 30px 40px !important;
+}
+
+.title {
+	text-align: left;
+	padding: 0px 40px;
+}
+
+#form-login > input {
+    display: block;
+    color: black;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    transition: 0.5s;
+    outline: none;
+}
+
+#form-login > input[type=submit] {
+    margin-top: 30px;
+    padding: 10px 20px;
+    transition: 1s;
+}
+
+#form-login > input[type=submit]:hover {
+    transform: rotateY(360deg);
+    color: white;
+    background-color: rgb(140, 2, 49);
+}
+
+#form-login > input[type=text], #form-login > input[type=password] {
+    border-bottom: 1px solid rgb(100, 100, 100);
+}
+
+#form-login > input[type=text]:hover, #form-login > input[type=password]:hover {
+    border-color: #16234d;
+}
+
+#logo-login {
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+#logo-login:hover {
+    transform: rotateZ(17deg);
+}
+
+.animatedElementMenu {
+	transition: 0.5s;
+	animation-duration: 1s;
+  	animation-name: animatedElementMenuIn;
+} 
+
+@keyframes animatedElementMenuIn {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 40%;
+  }
+}
+
+/*
+    ===================== Catalogue styles =====================
+*/
+
+nav {
+	z-index: 20;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    height: 35px;
+    position: fixed;
+    width: 100%;
+    background-color:rgba(255,255,255, 0.100);
+    text-align: center;
+}
+
+#imgNav {
+	width: 2em;
+	position:relative;
+	right: 30px;
+	transition: 1s;
+}
+
+#mainContainer {
+	width: 100%;
+	position: absolute;
+	color: white; /* ====== */
+}
+
+
+#newOrderA, #orderA > h4 {
+	color: white;
+}
+
+#mainMenu {
+	text-align: center;
+	margin-top: 100px;
+}
+
+@media (max-width: 543px) {
+	#mainMenu > a {
+		top: 0 !important;
+		margin-bottom: 20px;
+	}
+	#isAddedProduct {
+		width: 50%;
+	}
+	#notFoundImage {
+		width: 70% !important;
+	}
+}
+
+@media (max-width: 1000px) {
+	#notFoundImage {
+		width: 50%;
+	}
+	
+	
+	#dataElement {
+		width: 100% !important;
+	}
+	
+	#dataForm {
+		width: 100% !important;
+	}
+}
+
+@media (min-width: 543px) {
+	#newOrderA:hover {
+		margin-left: 19%;
+	}
+
+	#orderA:hover {
+		margin-right: 19%;
+	}
+
+	#mainMenu > a > img {
+		transition: 1s;
+	}
+
+	#mainMenu > a > img:hover {
+		width: 60%;
+	}
+}
+
+#mainMenu > a {
+	transition: 1s;
+	position: relative;
+	top: 90px;
+	display: inline-block;
+	width: 40%;
+	min-width: 270px;
+}
+
+#mainMenu > a > img {
+	width: 14em;
+}
+
+#titleNav {
+	text-shadow: 1px 1px 1px black;
+	color: white;
+	position: relative;
+	font-size: 15px;
+	top: 10px;
+	left: 15px;
+	float: left;
+}
+
+#finishSessionCatalogue {
+	transition: 1s;
+	position: relative;
+}
+
+#finishSessionCatalogue:hover {
+	transform: translateX(10px);
+}
+
+#buy {
+	position: fixed;
+	width: 45px;
+	bottom: 20px;
+	right: 20px;
+	transition: 1s;
+	border-radius: 50%
+}
+
+#backToMenu {
+	position: fixed;
+	width:  50px;
+	bottom: 20px;
+	left: 20px;
+	transition: 1s;
+}
+
+#backToMenu:hover {
+	transform: translateX(-10px);
+}
+
+
+#user {
+	position: relative;
+	width: 2.5em;
+	border-radius: 50%;
+	margin-right: 30px;
+	transition: 1s;
+}
+
+#user:hover {
+	width: 3.5em;
+	transform: rotateZ(360deg);
+}
+
+#search {
+	display: inline-block;
+	width: 40%;
+	margin-left: -5%;
+	align-items: flex-start
+}
+
+#search > input::placeholder {
+	color: rgb(200,200,200);
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+
+#search > input {
+	width: 100%;
+	color: white;
+	padding: 9px 17px;
+	border: none;
+	background-color: rgba(0,0,0,0.200);
+}
+
+#optionsNav {
+	background-color: white;
+	position: fixed;
+	top: 3.7em;
+	right: 3.4em;
+	animation-duration: 1s;
+  	animation-name: menuAnimation;
+}
+
+@media (max-width: 730px) {
+	#animationInElement {
+		width: 100%;
+		top: 0;
+		bottom: auto;
+		right: 0;
+		animation-name: slideinUp;
+	}
+	#optionsNav {
+		width: 100%;
+		right: 0;
+		animation-name: menuAnimation2;
+	}
+	
+}
+
+.hidden {
+	display: none !important;
+}
+
+@keyframes menuAnimation {
+  from {
+    right: -15em;
+  }
+
+  to {
+    right: 3.4em;
+  }
+}
+
+@keyframes menuAnimation2 {
+  from {
+    right: -25em;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes inOne {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes inTwo {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes inThree {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#optionsNav > a {
+	color: black;
+	background-color: white;
+	font-size: 13px;
+	padding: 15px 30px;
+	display: block;
+	transition: 0.3s;
+}
+
+#optionsNav > a:nth-child(1) {
+	animation-name: inOne;
+	animation-duration: 2s;
+}
+
+#optionsNav > a:nth-child(2) {
+	animation-name: inTwo;
+	animation-duration: 3s;
+}
+
+#optionsNav > a:nth-child(3) {
+	animation-name: inThree;
+	animation-duration: 4s;
+}
+
+#optionsNav > a:hover {
+	background-color: #e7e7e7;
+}
+
+#optionsNav > #exitLink:hover {
+	background-color: #fd4242;
+	color: white;
+}
+
+#optionsNav:after {
+	content: '';
+	width: 10px;
+	height: 10px;
+	z-index: -10;
+	top: 0;
+	right: 0;
+	margin-top: -5px;
+	position: absolute;
+	background-color: white;
+}
+
+#finishSessionNav img {
+	width: 1.5em;
+}
+
+#imgNav:hover {
+	transform: rotateZ(20deg);
+}
+
+#finishSesion {
+	transform: translateX(10px);
+}
+
+#actions {
+	float: right;
+}
+
+#buy-buttom {
+    position: absolute;
+    right: 80px;
+}
+
+#products {
+    padding: 7px;
+    position: absolute;
+    z-index: -1;
+    width: 97%;
+    top: 60px;
+    text-align: center;
+}
+
+.product {
+	background-color: transparent;
+ 	width: 190px;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 7px;
+    backdrop-filter: blur(20px);
+    display: inline-block;
+}
+
+.dataProduct > a > img {
+	position: relative;
+	left: 120px;
+	top: -40px;
+	width: 30px;
+}
+
+.delButtom {
+	transition: 1s;
+}
+
+.delButtom:hover {
+	transform: rotateX(360deg)
+}
+
+.invisibility {
+    visibility: hidden;
+}
+
+.product > img {
+    display: block;
+}
+
+#deshacer {
+	transition: 1s;
+	margin-top: 3px;
+	width: 1.7em;
+}
+#deshacer:hover {
+	transform: rotateZ(360deg);
+}
+
+.product > div:nth-child(2), .product > div:nth-child(3) {
+    display: inline-block;
+}
+
+.productPrice {
+    color: #533fbf;
+    font-style: italic;
+}
+
+#price {
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	position: fixed;
+	top: 90px;
+	right: 20px;
+}
+
+.productName {
+    margin-top: 10px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.product > div > input {
+    outline: none;
+    background-color: transparent;
+    padding: 4px 2px;
+    border: none;
+    border-bottom: 1px solid #533fbf;
+    border-radius: 3px;
+    width: 40px;
+    margin-left: 10px;
+    margin-right: 50px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.noStock > img {
+	filter: blur(2px);
+}
+
+.product {
+	transition: 0.5s;
+	animation-duration: 2s;
+  	animation-name: productAnimation;
+}
+#ordersList {
+	box-shadow: inset 1px 0px 0px grey;
+}
+@keyframes productAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.product:hover {
+	background-color: rgba(255,255,255,0.05);
+	box-shadow: 5px 5px 20px black;
+}
+
+
+.noStock::after {
+	text-shadow: 1px 1px 1px black;
+	color: white;
+	content: "No disponible";
+	position: fixed;
+	top: 115px;
+	z-index: 2;
+	left: 60px;
+}
+
+.product > div > input:disabled {
+    border-color: red;
+}
+
+.product > div > input {
+	color: white;
+}
+
+#finishSession {
+	position: fixed;
+	width: 50px;
+	bottom: 15px;
+	left: 15px;
+	transition: 1s;
+	box-shadow: -2px 2px 5px black;
+	border-radius: 50%
+}
+
+#finishSession:hover {
+	transform: rotateX(360deg);
+}
+
+.addToCar {
+	margin-top: 10px;
+	width: 90%;
+	background-color: transparent;
+	border: none;
+	color: white;
+	padding: 5px 20px;
+	transition: 0.5s;
+}
+
+#viewNotProducts {
+	text-align: center;
+	position: relative;
+	top: 140px;
+}
+
+#viewNotProducts > img {
+	animation-duration: 3s;
+	animation-name: packageAnimation;
+	animation-iteration-count: infinite;	
+}
+
+#viewNotProducts > h4 {
+	margin-top: 10px;
+	font-size: 23px;
+	padding: 10px;
+}
+
+#viewOrderFinish {
+	position: relative;
+	top: 90px;
+	text-align: center;
+}
+
+#viewNotProducts > p {
+	margin-top: -5px;
+	color: #9a9996;
+	font-size: 13px;
+}
+
+
+.addToCar:hover {
+	background-color: rgb(255, 0, 71);
+}
+
+.addToCar:disabled {
+	visibility: hidden;
+}
+
+
+
+#buy:hover {
+	transform: translateX(10px);
+}
+
+/* The Modal (background) */
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 40; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
+  left: 0;
+  top: -50px;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  backdrop-filter: blur(10px);
+  color: black;
+}
+
+@keyframes notify {
+  from {
+  	transform: rotate3d(0, 10, 10, 177deg);
+  }
+
+  to {
+    transform: rotate3d(0, 0, 0, 1deg);
+  }
+}
+
+.modal-content {
+  animation-name: notify;
+  animation-duration: 1.5s;
+  background-color: rgb(255,255,255,0.800);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid black;
+  backdrop-filter: blur(100px);
+  width: 40%;
+}
+
+.modal-content > h3 {
+	padding: 10px;
+}
+
+.modal-content > p {
+	padding: 20px;
+}
+
+.modal-content > div {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+
+.modal-content > div > a {
+	padding: 10px 20px;
+	color: black;
+}
+
+#dataForm {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	background-color: #ffffff40;
+	padding-top: 20px;
+	transition: 1s;
+	animation-duration: 1s;
+	animation-name: inForm;
+}
+
+@keyframes inForm {
+  from {
+  	transform: rotate3d(1, 1, 1, 240deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+}
+
+#textSummary {
+	margin-top: 1.5%;
+	margin-bottom: 0.2%;
+}
+
+#sendMethodDiv {
+	margin-top: 5%;
+	width: 50%;
+	margin-top: 20px;
+	display: inline-block;
+	text-align: center;
+}
+.method {
+	position: relative;
+	width: 100px;
+	transition: 1s;
+}
+
+#textSummary {
+	font-size: 18px;
+	text-shadow: 1px 1px 1px black;
+}
+
+#method1:hover {
+	transform: rotateY(360deg);
+}
+
+#method2:hover {
+	transform: rotateZ(-30deg);
+}
+
+#method3:hover {
+	transform: rotate3d(1, 1, 1, 360deg)
+}
+
+.sendInput {
+  	position: absolute;
+  	opacity: 0;
+  	width: 0;
+  	height: 0;
+}
+
+
+.sendInput + img {
+	border-radius: 10px;
+	padding: 20px;
+  	cursor: pointer;
+}
+
+
+#dataOrder {
+	text-align: center;
+}
+
+.animatedSelected {
+	animation-duration: 3s;
+  	animation-name: selectedAnimation;
+  	top: -1000px;
+}
+
+
+@keyframes selectedAnimation {
+  from {
+  	top: 0;
+  }
+  to {
+    top: -1000px;
+  }
+}
+
+.animatedNoSelected {
+	transform: rotateY(90deg);
+	animation-duration: 1s;
+  	animation-name: noSelectedAnimation;
+}
+
+@keyframes noSelectedAnimation {
+  from {
+  	transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+
+#formDataOrder {
+	display: inline-block;
+	text-align: center;
+	width: 70%;
+}
+
+.label + input {
+	padding: 7px 10px !important;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#mensaje {
+	padding: 20px;
+	background-color: #241f31;
+	display: block;
+	position: fixed;
+	bottom: 20px;
+	color: white;
+	right: 20px;
+	border-left: 4px solid red;
+}
+
+.inputData {
+	width: 50%;
+	border: none;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+#sendButton {
+	padding: 10px 30px;
+	border: none;
+	color: white;
+	background-color: transparent;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	transition: 1s;
+}
+
+#sendButton:hover {
+	background-color: #ff0047;
+}
+
+#newOrder {
+	position: fixed;
+	width: 50px;
+	bottom: 20px;
+	right: 20px;
+	transition: 1s;
+}
+
+#newOrder:hover {
+	transform: translateX(10px);
+}
+
+#noOrders {
+	margin-top: 180px;
+	text-align: center;
+}
+
+#noOrders * {
+	text-shadow: 1px 1px 1px black;
+}
+
+#viewWithOrders {
+	margin-top: 70px;
+}
+
+#viewWithOrders > h4 {
+	padding: 20px;
+	margin-left: 20px;
+	text-shadow: 1px 1px 1px black;
+}
+
+#viewWithOrders > ul {
+	border: 1px solid #767676;
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+}
+
+#noOrders > img {
+	width: 200px;
+	transition: 0.5s;
+	animation-duration: 3s;
+	animation-name: packageAnimation;
+	animation-iteration-count: infinite;	
+}
+
+@keyframes packageAnimation {
+    0% {
+		transform: rotate3d(1, 1, 1, 1deg);
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
+
+#noOrders > h4 {
+	font-size: 20px;
+	color: white;
+}
+
+#noOrders > p {
+	margin-top: 7px;
+	color: #f6f6f6;
+	font-size: 14px;
+}
+
+#dataElement {
+	display: inline-block;
+	width: 20%;
+	text-align: left;
+}
+
+.progressElement {
+	margin-right: 30px;
+	width: 70%;
+}
+
+#actionsElement {
+	text-align: center;
+	width: 5%;
+	display: inline-block;
+}
+
+.liElement {
+	padding: 20px;
+	transition: 1s;
+	backdrop-filter: blur(8px);
+	background-color: #ffffff14;
+	text-align: center;
+}
+
+.liElement:hover {
+	background-color: rgba(255,255,255, 0.150);
+}
+
+.icon {
+	width: 25px;
+}
+progress {
+  height: 5px;
+  position: relative;
+  top: -15px;
+  background: white;
+}
+
+progress::-webkit-progress-value {
+  background-color: rgb(255, 0, 71);
+}
+
+progress::-webkit-progress-bar {
+  background-color: grey;
+}
+
+#idOrderInfo + p {
+	color: rgb(177, 177, 177);
+	text-shadow: 1px 1px 1px black;
+	margin-top: 5px;
+	font-size: 12px;
+}
+
+
+
+#actionsElement > a > img {
+	transition: 1s;
+}
+
+#actionsElement > a > img:hover {
+	transform: rotateX(360deg);
+}
+
+#textModel {
+	text-align: center;
+}
+
+.danger {
+	background-color: red;
+	color: white !important;
+}
+
+#edit {
+	backdrop-filter: blur(20px);
+	width: 70%;
+	margin-left: auto;
+	background-color: rgba(255,255,255,0.050);
+	margin-right: auto;
+	margin-top: 20px;
+	border-radius: 5px;
+	border: 1px solid #a3a3a3;
+	text-align: center;
+}
+
+#editContainer {
+	margin-top: 100px;
+}
+#editFormd {
+	text-align: center;
+}
+
+#editFormd > label {
+	padding: 60px;
+}
+
+#idOrderInfo {
+	text-shadow: 1px 1px 1px black;
+}
+
+#editFormd > input {
+	background-color: transparent;
+	border: 1px solid rgb(255, 0, 71);
+	backdrop-filter: blur(20px);
+	color: white;
+	border-radius: 5px;
+	width: 20%;
+	padding: 7px 20px;
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#enviar {
+	border: none !important;
+	transition: 1s;
+	width: 200px;
+	padding: 10px 20px !important;
+	color: white;
+	background-color: #434141 !important;
+}
+
+#enviar:hover {
+	background-color: rgb(255, 0, 71) !important;
+}
+
+.prod {
+	display: inline-block;
+	padding: 10px;
+}
+
+.prod > p {
+	padding: 10px;
+}
+
+.prod > input[type="number"] {
+	color: white;
+	border: 1px solid rgb(255, 0, 71);
+	backdrop-filter: blur(50px);
+	border-radius: 5px;
+	padding: 7px 10px;
+	background-color: transparent;
+	width: 150px;
+}
+
+.prod > input[type="submit"] {
+	margin-bottom: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	background-color: transparent;
+	padding: 7px 10px;
+	width: 150px;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	transition: 1s;
+}
+
+.prod > input[type="submit"]:hover {
+	background-color: rgb(255, 0, 71);
+}
+

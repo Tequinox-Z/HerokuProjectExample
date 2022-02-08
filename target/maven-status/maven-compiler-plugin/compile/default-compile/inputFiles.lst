@@ -1,0 +1,14 @@
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/repository/ProductRepository.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/model/Product.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/service/UsersService.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/service/OrdersService.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/controller/LoginController.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/repository/UsuarioRepository.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/model/OrderProduct.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/repository/OrderRepository.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/controller/AppController.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/repository/OrderproductRepository.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/model/User.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/service/ProductService.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/Application.java
+/home/tequinox/Documents/workspace-spring-tool-suite-4-4.13.0.RELEASE/WebVenta/src/main/java/com/example/demo/model/Order.java
