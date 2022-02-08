@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Catálogo</title>
+	<link rel="stylesheet" href="../CSS/styles.css"/>
+</head>
+<body>
+    <nav>
+    	<p id="titleNav">Lista de productos</p>
+    	<form action="/order/catalogue" id="search">
+			<input id="searchInput" name="q" type="text" placeholder="🔎 Buscar" th:value="${param.q}"/>
+		</form>
+    	<div id="actions">
+			<img loading="lazy" id="user" alt="Tú" src="../img/user.jpg" title="Tú"/>
+			<div class="hidden" id="optionsNav">
+				<a href="../order/catalogue">
+					<span>🔄</span> Refrescar
+				</a>
+				<a href="../orders">
+					<span>🛒</span> Mis pedidos
+				</a>
+				<a id="exitLink" href="../login/exit">
+					<span>🚪</span> Cerrar sesión
+				</a>
+			</div>
+    	</div>
+    </nav>
+	<div id="mainContainer">
+		<div id="products">
+		<form method="POST" th:action="'/order/catalogue/add/' + ${product.ref}" th:each="product: ${products}" class="product" th:classappend="${product.amount == 0} ? noStock : widthStock">
+			<img loading="lazy" class='productImage' th:src="'../img/products/' + ${product.imageUrl}" alt='Imagen del producto'/>
+			<div>
+				<p class='productName'th:text="${product.name}"></p> 
+				<input class="amount" name='amount' type='number' min='1' value="1" th:max="${product.amount}" th:disabled="${product.amount == 0}"/>
+			</div>
+			<div>
+				<p class='productPrice' th:text="${product.price} + '€'"></p>
+			</div>
+			<input type='submit' class='addToCar' value='Añadir al carrito' th:disabled="${product.amount == 0}"/>
+		</form>
+		<div th:if="${products.size() == 0}">
+			<img id="notFoundImage" src="../img/notFound.png"/>
+			<h4>Sin coincidencias</h4>
+		</div>
+	</div>
+	</div>
+	<a href="/menu">
+		<img loading="lazy"  id="backToMenu" alt="Volver al menú" src="../img/menu.png" title="Volver al menú"/>
+	</a>
+	<a href="/order/summary">
+		<img loading="lazy" id="buy" alt="Comprar todo" src="../img/buy.png" title="Comprar todo"/>
+	</a>
+	<div id="isAddedProduct" th:if="${isAddedProduct}">
+		<p>✓ Se ha añadido el producto</p>
+	</div>
+	<script src="../js/nav.js"></script>
+	<script src="../js/search.js"></script>
+</body>
+</html>
