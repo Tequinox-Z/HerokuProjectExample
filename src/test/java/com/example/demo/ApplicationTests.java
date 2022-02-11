@@ -12,7 +12,7 @@ class ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		assertTrue(new User("Salva").getUsername().equals("Salva"));
+		assertTrue(new User("Salva").getUsername().equals("Salv"));
 	}
 
 }
